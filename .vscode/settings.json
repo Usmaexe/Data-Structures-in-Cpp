@@ -59,7 +59,8 @@
   "files.associations": {
     "*.embeddedhtml": "html",
     "iostream": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "new": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

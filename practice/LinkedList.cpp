@@ -170,6 +170,21 @@ void Merge(Node *&third,Node *first, Node *second){
   // return third;
 }
 
+int middleElement(Node *head){
+  Node *p,*q = new Node;
+  p =head; q = head;
+  cout<<"before";
+  while(q!=nullptr){
+    if(q->next!=nullptr)
+      q=q->next->next;
+    else
+      break;
+    p=p->next;
+  }
+  cout<<p->data;
+  return p->data;
+}
+
 int main(){
   int num,ele;
   Node *head = new Node;
@@ -193,6 +208,7 @@ int main(){
 
   ///NUMBER OF NODES
   cout << "Number of Nodes : " << Node::numEle << endl;
+  cout << "Middle of Elements : " << middleElement(head) << endl;
   cout << "Maximum : " << MaxNode(head) << endl;
   cout << "Sum : " << SumNodes(head) << endl;
   int res = Searching(head,4)+1;
@@ -218,21 +234,21 @@ int main(){
 
 
   //CONCATENATE
-  Node *head2 = new Node;
-  head2 = nullptr;
-  Insert(head2,4,1);
-  for(int i = 1 ; i <= 3 ; i++){
-    Insert(head2,i*5,i+1);
-  }
+  // Node *head2 = new Node;
+  // head2 = nullptr;
+  // Insert(head2,4,1);
+  // for(int i = 1 ; i <= 3 ; i++){
+  //   Insert(head2,i*5,i+1);
+  //}
   // Concatenate(head,head2);
   // Display(head);
   // cout<< head->data;
   // cout<< head2->data;
 
   ///MERGING
-  Display(head2);
-  Node *third = new Node;
-  Merge(third,head,head2);
-  Display(third);
+  // Display(head2);
+  // Node *third = new Node;
+  // Merge(third,head,head2);
+  // Display(third);
   return 0;
 }
